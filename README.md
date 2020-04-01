@@ -1,6 +1,4 @@
-<p align="center" >
-  <img src="./src/assets/images/logo.svg" width="70%" />
-</p>
+# Rocketshoes
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
