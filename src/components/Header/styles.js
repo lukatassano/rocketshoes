@@ -6,6 +6,14 @@ export const Container = styled.header`
   justify-content: space-between;
   align-content: center;
   margin: 50px 0;
+
+  img {
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
 `;
 
 export const Cart = styled(Link)`
@@ -15,7 +23,7 @@ export const Cart = styled(Link)`
   transition: opacity 0.2s;
 
   &:hover {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   div {
