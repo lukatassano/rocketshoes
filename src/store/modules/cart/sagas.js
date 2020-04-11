@@ -1,6 +1,8 @@
 import { call, select, put, all, takeLatest } from "redux-saga/effects";
 
 import api from '../../../services/api';
+import history from '../../../services/history';
+
 import {formatPrice} from '../../../util/format';
 
 import {addToCartSuccess, updateAmountSuccess} from './actions';
@@ -39,9 +41,9 @@ function* addToCart({id}) {
     }
 
     yield put(addToCartSuccess(data));
-  }
-
-  
+    
+    history.push('/cart');
+  } 
 }
 
 function* updateAmount({id, amount}) {
@@ -54,7 +56,7 @@ function* updateAmount({id, amount}) {
     return toast.error('Quantidade solicitada fora de estoque');
   }
 
-  yield put(updateAmountSuccess(id, amount))
+  yield put(updateAmountSuccess(id, amount));
 }
 
 export default all([
