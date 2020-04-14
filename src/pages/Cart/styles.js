@@ -77,6 +77,11 @@ export const ProductTable = styled.table`
     background: none;
     border: 0;
     padding: 6px;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 `;
 
